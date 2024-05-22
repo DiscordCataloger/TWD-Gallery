@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+header .title-lg {
+  font-size: 2.5rem;
+  color: brown;
+  font-family: "Wones Eroded";
+  letter-spacing: 3px;
+  font-stretch: 100px;
+}
+
+hr {
+  border: 40% white;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 15px;
+}
+
+.stretch {
+  display: inline-block;
+  transform: scale(2, 1.8);
+}
+
+.gallery {
+  width: 60%;
+  height: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.portrait img {
+  width: 100px;
+  height: 600px;
+  opacity: 0.5;
+  object-fit: cover;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+
+.portrait img:hover {
+  opacity: 1;
+  filter: none;
+  -webkit-filter: none;
+  /* width: 105px;
+  height: 605px; */
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.15);
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    text-align: center;
+    width: 40vw;
+    height: 10vh;
+    margin-bottom: 30px;
+  }
+
+  hr {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+
+  header .title-lg {
+    font-size: 1.4rem;
+  }
+  
+  .gallery {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 2600px;
+    width: 80vw;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .portrait img {
+    flex: auto;
+    width: 155px;
+  }
+}
